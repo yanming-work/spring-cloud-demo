@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: spring-cloud-config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/yanming-work/spring-cloud-demo  # 远程git仓库的地址
+          basedir: E:\GitWork\spring-cloud-demo\spring-cloud-config\src\main\resources  # 可以使用这个配置项来指定本地git仓库的路径
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+server:
+  port: 8974
