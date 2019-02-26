@@ -37,3 +37,25 @@
 
 
 ##配置管理客户端 spring-cloud-config-client
+    创建application.yml 配置文件
+        #因为spring boot是启动的时候才从配置文件中读取配置属性，配置文件在远程配置中心的话，注册中心的信息需要放在bootstrap.properties中才能启动优先读取，放在application.properties.会报该异常没发现属性
+        server:
+          port: 8787
+        spring:
+          application:
+            name: config-clinet #指定了配置文件的应用名
+          cloud:
+            #配置中心
+            config:
+              # 指明配置服务中心的网址
+              uri: http://localhost:8686
+              name: config
+              #指定的环境 dev 开发环境配置文件 |  test 测试环境  |  pro 正式环境
+              profile: dev
+              #指定分支
+              label: master
+        # 注册中心配置
+        eureka:
+          client:
+            serviceUrl:
+              defaultZone: http://localhost:10000/eureka/
