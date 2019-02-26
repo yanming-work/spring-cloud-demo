@@ -1,0 +1,27 @@
+
+server:
+  port: 8686
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        #配置本地
+        #native:
+        #search-locations: classpath:/config/
+        # 配置git仓库
+        git:
+          # git仓库地址
+          uri: https://github.com/yanming-work/config_demo.git
+          # 配置仓库路径
+          search-paths: yml
+          #username: username
+          #password: *********
+# 注册中心配置
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:10000/eureka/
