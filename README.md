@@ -106,7 +106,7 @@ Spring Cloud 也有一个缺点，只能使用Java开发,不适合小型独立�
 
 安装了插件：Lombok、Alibaba Java Code Guidelines(阿里 Java 规约插件) 等。
 
-###1、注册中心（eureka）
+###1、注册中心-服务治理（eureka）
 eureka项目：eureka-server(服务端)；eureka-client(客户端)。
 ###2、分布式配置中心（spring cloud config）
 spring-cloud-config项目：spring-cloud-config-server(服务端)；spring-cloud-config-client(客户端)。
