@@ -3,10 +3,7 @@ package com.github.yanming.demo.spring.cloud.config.client;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /** 当有请求/fresh节点的时候，会重新请求一次ConfigServer去拉取最新的配置文件
         * 请求/fresh需要有几点要求：1.加actuator的依赖 2.SpringCloud1.5以上需要设置 management.security.enabled=false
@@ -25,9 +22,10 @@ import org.springframework.web.bind.annotation.RestController;
  **/
 @RefreshScope
 @RestController
+@RequestMapping("/")
 public class TestController {
 
-    @RequestMapping("/")
+    @RequestMapping("/home")
     public String home() {
         return "Hello World!spring cloud config Client !";
     }
@@ -42,7 +40,7 @@ public class TestController {
     /**
      * 返回配置文件中的值
      */
-    @GetMapping("/test")
+    @RequestMapping(value = "/test", method = RequestMethod.GET)
     @ResponseBody
     public String returnValue(){
         String sb = "name is " + name + "," + "age is " +age+ "," + "version is " +version;

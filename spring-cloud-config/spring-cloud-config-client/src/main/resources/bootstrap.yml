@@ -9,14 +9,13 @@ spring:
     config:
       # 指明配置服务中心的网址
       uri: http://localhost:8686
-      #指定的环境
+      name: config
+      #指定的环境 dev 开发环境配置文件 |  test 测试环境  |  pro 正式环境
       profile: dev
       #指定分支
-      #label: master
+      label: master
 # 注册中心配置
 eureka:
-  instance:
-    hostname: localhost
   client:
     serviceUrl:
       defaultZone: http://localhost:10000/eureka/

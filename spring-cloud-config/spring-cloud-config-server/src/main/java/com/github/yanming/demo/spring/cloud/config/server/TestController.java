@@ -21,6 +21,7 @@ import java.util.List;
  **/
 @RefreshScope
 @RestController
+@RequestMapping("/")
 public class TestController {
     /**
      *  注入发现客户端
@@ -28,7 +29,7 @@ public class TestController {
     @Autowired
     private DiscoveryClient client;
 
-    @RequestMapping("/")
+    @RequestMapping("/home")
     public String home() {
         return "Hello World!spring cloud config Service !";
     }
