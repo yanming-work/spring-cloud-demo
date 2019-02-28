@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * EurekaClient
+ *  #@EnableEurekaClient基于spring-cloud-netflix。服务采用eureka作为注册中心，使用场景较为单一。
+ *  #@EnableDiscoveryClient基于spring-cloud-commons。服务采用其他注册中心。
  * @author : YanMing(yanming_work@163.com)
  * @date : 2019/2/26 13:58
  **/

@@ -5,11 +5,11 @@
 ##Eureka 服务端
     eureka-server 服务端代码实现
         在pom中引入依赖包：
-        <dependency>
-                    <groupId>org.springframework.cloud</groupId>
-                    <artifactId>spring-cloud-starter-eureka-server</artifactId>
-                    <version>1.4.6.RELEASE</version>
-         </dependency>
+           <!--eureka 服务端jar,注意artifactId名称，与之前的版本不一样-->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+            </dependency>
 
         创建 application.yml 配置文件：
         server:
@@ -29,11 +29,11 @@
 ##Eureka 客户端端
     eureka-client 客户端代码实现
          在pom中引入依赖包
+         <!--eureka 客户端jar,注意artifactId名称，与之前的版本不一样-->
          <dependency>
-                     <groupId>org.springframework.cloud</groupId>
-                     <artifactId>spring-cloud-starter-eureka</artifactId>
-                     <version>1.4.6.RELEASE</version>
-          </dependency>
+             <groupId>org.springframework.cloud</groupId>
+             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+         </dependency>
           创建 application.yml 配置文件：
           server:
             port: 8001

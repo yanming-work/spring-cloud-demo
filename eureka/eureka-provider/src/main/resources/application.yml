@@ -1,12 +1,16 @@
 server:
-  port: 8001
+  port: 8060
 spring:
   application:
-    name: eureka-client
+    name: eureka-provider
 # 注册中心配置
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:10000/eureka/
       #defaultZone: http://admin:admin@localhost:10000/eureka/
-
+  instance:
+    instance-id: ${spring.application.name}
+    prefer-ip-address: true
+  server:
+    enable-self-preservation: false
