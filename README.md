@@ -112,3 +112,10 @@ eureka项目：eureka-server(服务端)；eureka-client(客户端)。
 spring-cloud-config项目：spring-cloud-config-server(服务端)；spring-cloud-config-client(客户端)。
 
 ###2、负载均衡(ribbon)
+
+
+
+
+参考文献
+
+https://github.com/forezp/SpringCloudLearning
