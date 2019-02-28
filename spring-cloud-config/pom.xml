@@ -17,6 +17,14 @@
         <module>spring-cloud-config-client</module>
     </modules>
 
+
+    <dependencies>
+
+
+
+    </dependencies>
+
+
     <build>
         <plugins>
             <plugin>

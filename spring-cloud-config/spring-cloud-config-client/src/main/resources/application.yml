@@ -1,0 +1,10 @@
+server:
+  port: 8787
+spring:
+  application:
+    name: config-clinet #指定了配置文件的应用名
+# 注册中心配置
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:10000/eureka/
