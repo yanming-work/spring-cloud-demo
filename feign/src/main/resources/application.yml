@@ -1,0 +1,10 @@
+server:
+  port: 8050
+spring:
+  application:
+    name: service-feign
+# 注册中心配置
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:10000/eureka/
