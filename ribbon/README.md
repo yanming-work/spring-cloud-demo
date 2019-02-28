@@ -1,5 +1,6 @@
 # Ribbon
 提供云端负载均衡，有多种负载均衡策略可供选择，可配合服务发现和断路器使用。
+Spring Cloud Ribbon是基于Netflix Ribbon实现的一套客户端,负载均衡的工具;
 
     /**
      * 实例化ribbon使用的RestTemplate,使用@EnableEurekaClient声明为Eureka客户端， RestTemplate需要配合@LoadBalanced才能通过服务名spring.application.name解析到具体的服务上
