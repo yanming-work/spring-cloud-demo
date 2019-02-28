@@ -9,8 +9,8 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:10000/eureka/
       #defaultZone: http://admin:admin@localhost:10000/eureka/
-  instance:
-    instance-id: ${spring.application.name}
-    prefer-ip-address: true
-  server:
-    enable-self-preservation: false
+  #instance:
+    #instance-id: ${spring.application.name}
+    #prefer-ip-address: true
+  #server:
+    #enable-self-preservation: false
