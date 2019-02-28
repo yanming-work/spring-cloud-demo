@@ -39,8 +39,8 @@
         <!--Spring Cloud -->
         <spring-cloud.version>Greenwich.RELEASE</spring-cloud.version><!--Finchley.RELEASE-->
 
-        <!--spring-cloud Finchley.RELEASE 版本结合 spring-boot  2.0.x.RELEASE 运行-->
-
+        <!--spring-cloud Finchley.RELEASE  版本结合  spring-boot  2.0.x.RELEASE 运行-->
+        <!--spring-cloud Greenwich.RELEASE 版本结合 spring-boot  2.1.x.RELEASE 运行-->
 
     </properties>
 
