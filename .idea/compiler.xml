@@ -14,13 +14,15 @@
         <module name="hystrix-demo" />
         <module name="hystrix-turbine" />
         <module name="ribbon" />
+        <module name="spring-cloud-bus-kafka" />
+        <module name="spring-cloud-bus-rabbitmq" />
         <module name="spring-cloud-config-client" />
         <module name="spring-cloud-config-server" />
         <module name="zuul" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
-      <module name="eureka-consumer" target="1.5" />
+
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

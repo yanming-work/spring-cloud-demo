@@ -10,6 +10,8 @@
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/eureka/eureka-consumer/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-cloud-bus/spring-cloud-bus-activemq/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-cloud-bus/spring-cloud-bus-rabbitmq/spring-cloud-bus-kafka/pom.xml" />
       </set>
     </option>
   </component>

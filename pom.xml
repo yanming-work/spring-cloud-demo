@@ -19,6 +19,7 @@
         <module>ribbon</module>
         <module>feign</module>
         <module>zuul</module>
+        <module>spring-cloud-bus</module>
     </modules>
 
 
