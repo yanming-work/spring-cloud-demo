@@ -110,3 +110,5 @@ Spring Cloud 也有一个缺点，只能使用Java开发,不适合小型独立�
 eureka项目：eureka-server(服务端)；eureka-client(客户端)。
 ###2、分布式配置中心（spring cloud config）
 spring-cloud-config项目：spring-cloud-config-server(服务端)；spring-cloud-config-client(客户端)。
+
+###2、负载均衡(ribbon)
