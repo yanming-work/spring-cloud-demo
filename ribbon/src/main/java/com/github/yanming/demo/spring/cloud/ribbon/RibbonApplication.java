@@ -29,18 +29,7 @@ public class RibbonApplication {
     public RestTemplate restTemplate() {
         return new RestTemplate();
     }
-    /**
-     * 上面的代码无效 RestTemplate注入有问题,   新版的需要这样注入
-     **/
-    /**
-    @Bean
-    @LoadBalanced
-    RestOperations restOperations(RestTemplateBuilder builder) {
-        return builder.build();
-    }
 
-
-    **/
     public static void main(String[] args) {
         SpringApplication.run(RibbonApplication.class, args);
     }

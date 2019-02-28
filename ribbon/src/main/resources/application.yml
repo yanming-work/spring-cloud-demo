@@ -7,4 +7,3 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:10000/eureka/
-#      这里写一个都行，因为 Eureka Server 是相互注册，高可用注册中心
