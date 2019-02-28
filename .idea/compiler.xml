@@ -7,22 +7,38 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="eureka-client" />
+        <module name="eureka-provider" />
         <module name="eureka-server" />
+        <module name="feign" />
+        <module name="hystrix-dashboard" />
+        <module name="hystrix-demo" />
+        <module name="hystrix-turbine" />
+        <module name="ribbon" />
         <module name="spring-cloud-config-client" />
         <module name="spring-cloud-config-server" />
+        <module name="zuul" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="8" />
+    <bytecodeTargetLevel target="8">
+      <module name="eureka-consumer" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="eureka" options="-parameters" />
       <module name="eureka-client" options="" />
+      <module name="eureka-provider" options="" />
       <module name="eureka-server" options="" />
+      <module name="feign" options="" />
+      <module name="hystrix-dashboard" options="" />
+      <module name="hystrix-demo" options="" />
+      <module name="hystrix-turbine" options="" />
+      <module name="ribbon" options="" />
       <module name="spring-cloud-config" options="-parameters" />
       <module name="spring-cloud-config-client" options="" />
       <module name="spring-cloud-config-server" options="" />
       <module name="spring-cloud-demo" options="-parameters" />
+      <module name="zuul" options="" />
     </option>
   </component>
 </project>

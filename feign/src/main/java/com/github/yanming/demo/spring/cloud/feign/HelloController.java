@@ -18,7 +18,7 @@ public class HelloController {
 
     @RequestMapping(value = "/hello", method = RequestMethod.GET)
     public String hello(String name) {
-        return helloClient.hello(name);
+        return helloClient.hello("Feign: "+name);
     }
 
 }

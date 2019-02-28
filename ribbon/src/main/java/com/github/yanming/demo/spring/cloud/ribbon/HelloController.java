@@ -22,8 +22,8 @@ public class HelloController {
 
 
     @RequestMapping("/hello")
-    public String hello(){
-        return helloService.helloService("Ribbon");
+    public String hello(String name){
+        return helloService.helloService("Ribbon: "+name);
 
     }
 
