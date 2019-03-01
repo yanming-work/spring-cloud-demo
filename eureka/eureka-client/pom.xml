@@ -25,7 +25,6 @@
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
 
-
         <!--用于监控项目，暴露各种指标,提供项目中的状态信息-->
         <dependency>
             <groupId>org.springframework.boot</groupId>

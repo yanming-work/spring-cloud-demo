@@ -1,13 +1,29 @@
 
 server:
   port: 10000
+spring:
+  application:
+    name: eureka-service
+  security:
+    filter:
+      order: 100
+      dispatcher-types: async, error, request
+    user:
+      name: admin
+      password: 123456
 eureka:
   instance:
     hostname: localhost
+    prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 5
+    lease-expiration-duration-in-seconds: 15
   client:
     #由于注册中心的职责就是维护服务实例,它并不需要去检索服务,所以也设置为false
     fetch-registry: false
     #由于该应用为注册中心,所以设置为false,代表不向注册中心注册自己
     register-with-eureka: false
-    serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+    service-url:
+      defaultZone: http://admin:123456@${eureka.instance.hostname}:${server.port}/eureka/
+  server:
+    enable-self-preservation: true
+    eviction-interval-timer-in-ms: 60000
