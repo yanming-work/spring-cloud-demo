@@ -21,7 +21,6 @@
         <module>zuul</module>
         <module>spring-cloud-bus</module>
         <module>spring-cloud-gateway</module>
-        <module>spring-cloud-zookeeper</module>
     </modules>
 
 
