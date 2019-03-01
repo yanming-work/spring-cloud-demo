@@ -1,0 +1,10 @@
+
+spring:
+  profiles: path_route
+  cloud:
+    gateway:
+      routes:
+      - id: path_route
+        uri: http://httpbin.org:80/get
+        predicates:
+        - Path=/foo/{segment}

@@ -1,0 +1,10 @@
+
+spring:
+  profiles: header_route
+  cloud:
+    gateway:
+      routes:
+      - id: header_route
+        uri: http://httpbin.org:80/get
+        predicates:
+        - Header=X-Request-Id, \d+

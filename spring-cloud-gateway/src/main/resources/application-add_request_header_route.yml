@@ -1,0 +1,13 @@
+#AddRequestHeaderGatewayFilterFactory(约定写成AddRequestHeader)，AddRequestHeader过滤器工厂会在请求头加上一对请求头，名称为X-Request-Foo，值为Bar。
+
+spring:
+  profiles: add_request_header_route
+  cloud:
+    gateway:
+      routes:
+        - id: add_request_header_route
+          uri: http://httpbin.org:80/get
+          filters:
+            - AddRequestHeader=X-Request-Foo, Bar
+          predicates:
+            - After=2019-03-01T09:00:00+08:00[Asia/Shanghai]

@@ -1,0 +1,10 @@
+
+spring:
+  profiles: method_route
+  cloud:
+    gateway:
+      routes:
+      - id: method_route
+        uri: http://httpbin.org:80/get
+        predicates:
+        - Method=GET
