@@ -6,6 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="consul-config-service" />
+        <module name="consul-consumer" />
+        <module name="consul-provider" />
         <module name="eureka-client" />
         <module name="eureka-provider" />
         <module name="eureka-server" />
