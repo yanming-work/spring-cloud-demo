@@ -1,0 +1,7 @@
+server:
+  port: 8633
+spring:
+  application:
+    name: consul-config-service
+  profiles:
+      active: dev
