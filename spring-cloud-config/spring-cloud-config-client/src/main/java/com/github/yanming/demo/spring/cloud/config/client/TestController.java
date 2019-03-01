@@ -34,6 +34,8 @@ public class TestController {
     public String home() {
         return "Hello World!spring cloud config Client !";
     }
+    @Value("${message}")
+    String message;
 
     @Value("${config.name}")
     String name;
@@ -42,13 +44,14 @@ public class TestController {
     @Value("${config.version}")
     String version;
 
+
     /**
      * 返回配置文件中的值
      */
     @RequestMapping(value = "/test", method = RequestMethod.GET)
     @ResponseBody
     public String returnValue(){
-        String sb = "name is " + name + "," + "age is " +age+ "," + "version is " +version;
+        String sb = "message is "+message+"," +"name is " + name + "," + "age is " +age+ "," + "version is " +version;
         return sb;
     }
 
@@ -61,7 +64,7 @@ public class TestController {
     public String hello(String name){
          //获取服务器端口
        int port= request.getServerPort();
-        String sb = "name is " + name + "("+port+")," + "age is " +age+ "," + "version is " +version;
+        String sb = "message is "+message+"," +"name is " + name + "("+port+")," + "age is " +age+ "," + "version is " +version;
         return sb;
     }
 

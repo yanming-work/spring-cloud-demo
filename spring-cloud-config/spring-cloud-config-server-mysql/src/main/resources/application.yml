@@ -1,0 +1,25 @@
+
+server:
+  port: 8585
+# 注册中心配置
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://admin:123456@localhost:10000/eureka/
+spring:
+  profiles:
+     active: jdbc
+  application:
+     name: config-server-mysql
+  datasource:
+     url: jdbc:mysql://127.0.0.1:3308/config-jdbc?useUnicode=true&characterEncoding=utf8&characterSetResults=utf8&serverTimezone=GMT%2B8
+     username: root
+     password: 123456
+     driver-class-name: com.mysql.jdbc.Driver
+  cloud:
+     config:
+       label: master
+       server:
+         jdbc: true
+spring.cloud.config.server.jdbc.sql: SELECT key1, value1 from config_properties where APPLICATION=? and PROFILE=? and LABEL=?
+

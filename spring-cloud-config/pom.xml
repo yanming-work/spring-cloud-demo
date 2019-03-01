@@ -15,12 +15,17 @@
     <modules>
         <module>spring-cloud-config-server</module>
         <module>spring-cloud-config-client</module>
+        <module>spring-cloud-config-server-mysql</module>
     </modules>
 
 
     <dependencies>
 
-
+        <!--eureka 客户端jar,注意artifactId名称，与之前的版本不一样-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
 
     </dependencies>
 
