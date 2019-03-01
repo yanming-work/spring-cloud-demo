@@ -21,6 +21,7 @@
         <module>zuul</module>
         <module>spring-cloud-bus</module>
         <module>spring-cloud-gateway</module>
+        <module>spring-cloud-zookeeper</module>
     </modules>
 
 
@@ -71,11 +72,7 @@
 
     <dependencies>
 
-        <!--eureka 客户端jar,注意artifactId名称，与之前的版本不一样-->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-        </dependency>
+
         <!-- 引入 spring-boot测试模块 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
